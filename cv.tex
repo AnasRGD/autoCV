@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -54,7 +54,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.9595]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -97,32 +97,6 @@
 %debug page outer frames
 %\usepackage{showframe}
 
-
-% job listing environments
-\newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
-
-\newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
-
-
-
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -142,12 +116,12 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{Anas Raggad}\\[7.5pt]
+\href{https://github.com/AnasRGD}{\raisebox{-0.05\height}\faGithub\ AnasRGD} \ $|$ \ 
+\href{https://linkedin.com/in/anasrgd27}{\raisebox{-0.05\height}\faLinkedin\ anasrgd27} \ $|$ \ 
+\href{https://anasrgd.github.io/autoCV/}{\raisebox{-0.05\height}\faGlobe \ myCV.com} \ $|$ \ 
+\href{mailto:anasraggad@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ anasraggad@gmail.com} \ $|$ \ 
+\href{tel:+33643973310}{\raisebox{-0.05\height}\faMobile \ +33.643.97.33.10}\\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -155,51 +129,96 @@
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Summary}
-This CV is automatically generated and deployed using the \href{https://github.com/jitinnair1/autoCV}{autoCV} template along with GitHub Actions such that a new version of the CV is compiled, published and ready for use when the cv.tex file is updated. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+\section{Interests}
+Transforming data into actionable insights driving strategic business decisions.
 
 %Experience
 \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
-
-
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
-  
-%Projects
-\section{Projects}
-
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\textbf{Data Engineer - Harlem Next B.V, Haarlem} & \hfill Jan 2023 - Present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Optimized and refactored ETL data pipelines, and developed modular components for streamlined pipeline development.
+        \item[--] Conducted a comprehensive cost analysis of BigQuery tasks, identifying optimization opportunities for cost savings.
+        \item[--] Optimized a Dataflow job for CDC using Datastream,  replicating data from over 150 MySQL instances to BigQuery.
+        \item [--] Established GitLab CI/CD pipelines for automated linting, testing, and deployment.
+        \item [--] Architected Terraform infrastructure, facilitating environment-specific deployments via DTAP approach.
+        \item [--] Developed a Dataflow job to purge inactive Firestore chats :  400k euros annual savings by eliminating 7bn records.
+        \item [--] Designed and maintained actionable business dashboards in Looker.
+        \item Keywords : GCP, PYTHON, JAVA, TERRAFORM, SQL, DATASTREAM, BIGQUERY, MYSQL, FIRESTORE, LOOKER. 
+
+
+    \end{itemize}
+    \end{minipage}
+}
 \end{tabularx}
 
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Engineer - Leroy Merlin, France} & \hfill Apr 2021 - Sept 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Deployed ETL data pipelines using composer (Airflow) on GCP
+        \item [--] Design and implementation of a Data Lake (GCS) and a Data Warehouse (Bigquery) on GCP
+        \item [--] Infra-as-Code using Terraform and Automation of deployments and CI/CD processes using Github Action.
+        \item [--] Developed a serverless API using Quarkus for data retrieval from a Mysql database, publishing results to a Kafka topic. 
+        \item Keywords : GCP, PYTHON, JAVA, HCL, SQL, BASH, DOCKER, KAFKA 
+
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Analyst \& Industry 4.0 Owner - ST Microelectronics, Morocco} & \hfill Oct 2017 - Aug 2020 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+         \item [--] Led single unit level traceability project on assembly equipment (\$3M CAPEX). 
+        \item [--] Collaborated with third party to build and test a model for equipment predictive maintenance. 
+        \item [--] Developed and deployed  AIV robots for quality improvement and cost reduction. 
+        \item [--] Led Cyber security governance for equipment hard drive backup: standard operating procedures \& security audits. 
+        \item [--] Supported operations with data analysis for capacity and cycle time improvement
+%Keywords : Industry 4.0 , Predictive and prescriptive maintenance, Robotics, Cyber-Security, Traceability 
+
+    \end{itemize}
+    \end{minipage}
+    }
+\end{tabularx}
+
+%Projects
+\section{Projects}  
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+%\textbf{Projects} & \hfill \href{https://github.com/AnasRGD?tab=repositories}{Link to Repo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{- E-voting application : Ensured correct election results based on Hyperledger Fabric and IBM Blockchain Platform}  \\
+{- Power Consumption Prediction: Developed a model for EATON’s data centers, enhancing server virtualization efficiency.}
+\end{tabularx}
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+2020 - 2021 & Advanced Masters (WO) - Big Data, Information technology at \textbf{ENSIMAG} \hfill \normalsize  \\
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+2020 - 2021 & Advanced Masters (WO) - Analysis, management and responsible use 
+ at \textbf{Grenoble School of Management} \hfill  \\ 
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
+2012 - 2017 & Masters - Electrical Engineering (Automation, Industrial Computing) at \textbf{Mohammadia School of Eng.} \hfill \normalsize \\
 
-2021 & Class 10th Some Board \hfill  (Grades) \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\section{Publications}
+\section{Certifications}
 \begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
+\nocite{*} - Apache Spark with Scala , Sundog Education\\
+\nocite{*} - Taming Big Data with MapReduce and Hadoop, Sundog Education \\
+\nocite{*} - IBM Blockchain Foundation Developer V2, IBM 
 \end{refsection}
 
 %----------------------------------------------------------------------------------------
@@ -207,11 +226,15 @@ long long line of blah blah that will wrap when the table fills the column width
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+Languages &  \normalsize{Python, Java, SQL, HCL, bash, C}\\
+Cloud \& Big Data  &  \normalsize{GCP, Hadoop, Spark, Kafka}\\  
+Devops  &  \normalsize{Terraform, CI/CD, Docker, Git.}\\  
+Databases  &  \normalsize{BigQuery, MongoDB, PostgreSQL, MySQL, Firestore.}\\   
+Infrastructure  &  \normalsize{Looker, PowerBI}\\  
+Project Management  &  \normalsize{Agile - Scrum}\\ 
 \end{tabularx}
 
 \vfill
-\center{\footnotesize Last updated: \today}
+%\center{\footnotesize Last updated: \today}
 
 \end{document}
